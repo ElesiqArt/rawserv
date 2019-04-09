@@ -1,0 +1,27 @@
+.TH rawserv 1
+
+.SH NAME
+rawserv \- raw HTTP file server
+
+.SH SYNOPSIS
+.B rawserv
+.I port
+.I root
+[\fImax_path_length\fR=256]
+
+.SH DESCRIPTION
+.B rawserv
+serves raw HTTP files requested with the GET method relatively to the \fIroot\fR and shorter than \fImax_path_length\fR characters on a \fIport\fR.
+
+.SH EXIT STATUS
+.TP
+.B 0 \fR the server was closed with a signal.
+.TP
+.B 1 \fR the arguments could not be processed.
+.TP
+.B 2 \fR the signal handler could not be set.
+.TP
+.B 3 \fR the socket could not be created, binded or listened to.
+
+.SH CONFORMING TO
+RFC2616
